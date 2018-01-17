@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension 	type="module" version="3.1" client="site" method="upgrade">
+	<name>MOD_OVERDRIVE_NAME_LABEL</name>
+	<author> Negin </author>
+	<authorEmail>negin62_k@yahoo.com</authorEmail>
+	<version>1.0.0</version>
+	<description>MOD_OVERDRIVE_DESCRIPTION</description>
+	<files>
+		<filename module="mod_overdrive">mod_overdrive.php</filename>
+		<folder>language</folder>
+		<folder>images</folder>
+		<filename>mod_overdrive.xml</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>	
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_overdrive.ini
+		</language>
+		<language tag="en-GB">en-GB/en-GB.mod_overdrive.sys.ini
+		</language>
+	</languages>
+	<config>
+	<fields name="params">
+			<fieldset name="basic">
+			</fieldset>
+		<fieldset name="title1">
+		<field 
+   name="title1" 
+   label ="MOD_OVERDRIVE_TITLE1_LABEL"
+   description="MOD_OVERDRIVE_TITLE1_DESC"
+   type="editor" 
+   filter="safehtml" 
+   default="Sorry!! Your Library Card is Expired..."
+   />
+   </fieldset>
+   <fieldset name="title2">
+   <field 
+   name="title2" 
+   label="MOD_OVERDRIVE_TITLE2_LABEL"
+   description="MOD_OVERDRIVE_TITLE2_DESC"
+   type="editor" 
+   filter="safehtml" 
+   default=" A Library card has assigned to you.Library card number is:"
+   />
+    </fieldset>
+   <fieldset name="title3">
+   <field 
+   name="title3" 
+   label="MOD_OVERDRIVE_TITLE3_LABEL"
+   description="MOD_OVERDRIVE_TITLE3_DESC"
+   type="editor" 
+   default="You Have a valid Library Card. The Library card Number is:"
+   filter="safehtml" 
+   />
+    </fieldset>
+ <fieldset name="title4">
+   <field 
+   name="title4" 
+   label="MOD_OVERDRIVE_TITLE4_LABEL"
+   description="MOD_OVERDRIVE_TITLE4_DESC"
+   type="editor" 
+   default="Sorry!! Your Library Card is Invalid."
+   filter="safehtml" 
+   />
+    </fieldset>
+				
+		<fieldset name="versionhistory">
+		<field name="changelog" type="note" label="MOD_OVERDRIVE_NOTE_LABEL" description="MOD_OVERDRIVE_NOTE_DESC" />
+		</fieldset>
+		</fields>
+		
+	</config>
+</extension>	
