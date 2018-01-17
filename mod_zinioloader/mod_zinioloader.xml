@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+    type="module"
+    version="3.1"
+    client="site"
+    method="upgrade">
+    <name>Zinio Connector</name>
+    <author>Negin</author>
+    <authorEmail>negin62_k@yahoo.com</authorEmail>
+    <version>1.0.2</version>
+    <description>MOD_ZINIOLOADER_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_zinioloader">mod_zinioloader.php</filename>
+        <folder>tmpl</folder>
+        <folder>images</folder>
+		<folder>language</folder>
+        <folder>sql</folder>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>ziniolauncher.php</filename>
+        <filename>mod_zinioloader.php</filename>
+        <filename>mod_zinioloader.xml</filename>
+    </files>
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.rbdigital.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.rbdigital.sql</file>
+        </sql>
+    </uninstall>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_zinioloader.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_zinioloader.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="libID"
+                    type="text"
+                    size="50"
+                    label="MOD_ZINIOLOADER_FIELD_LIBID_LABEL"
+                    description="MOD_ZINIOLOADER_FIELD_LIBID_DESC" />
+                <field
+                    name="libToken"
+                    type="text"
+                    size="50"
+                    label="MOD_ZINIOLOADER_FIELD_TOKEN_LABEL"
+                    description="MOD_ZINIOLOADER_FIELD_TOKEN_DESC" />
+                <field
+                    name="description"
+                    type="editor"
+                    height="100"
+                    filter="safehtml"
+                    label="MOD_ZINIOLOADER_FIELD_DESCRIPTION_LABEL"
+                    description="MOD_ZINIOLOADER_FIELD_DESCRIPTION_DESC" />
+            </fieldset>
+            <fieldset name="APIAdvanceSetting">
+                <field
+                    name="useSSL"
+                    type="radio"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                    label="MOD_ZINIOLOADER_FIELD_USESSL_LABEL"
+                    description="MOD_ZINIOLOADER_FIELD_USESSL_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                    name="overrideURL"
+                    type="text"
+                    size="50"
+                    label="MOD_ZINIOLOADER_FIELD_OVERRIDEURL_LABEL"
+                    description="MOD_ZINIOLOADER_FIELD_OVERRIDEURL_DESC" />
+                <field
+                    name="passwordpostfix"
+                    type="text"
+                    size="50"
+                    label="MOD_ZINIOLOADER_FIELD_PASSWORDPOSTFIX_LABEL"
+                    description="MOD_ZINIOLOADER_FIELD_PASSWORDPOSTFIX_DESC" />
+                <field
+                    name="launcherpath"
+                    type="text"
+                    size="50"
+                    default="launcher.php"
+                    label="MOD_ZINIOLOADER_FIELD_LAUNCHER_LABEL"
+                    description="MOD_ZINIOLOADER_FIELD_LAUNCHER_DESC" />
+            </fieldset>
+            <fieldset name="developer">
+                <field
+                    name="sandModeSwitch"
+                    type="radio"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    label="MOD_ZINIOLOADER_FIELD_SANDMODE_LABEL"
+                    description="MOD_ZINIOLOADER_FIELD_SANDMODE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                 <field
+                    name="debugModeSwitch"
+                    type="radio"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    label="MOD_ZINIOLOADER_FIELD_DEBUGMODE_LABEL"
+                    description="MOD_ZINIOLOADER_FIELD_DEBUGMODE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+            
+        </fields>
+    </config>
+</extension>
